@@ -200,16 +200,23 @@ npm run dev
 
 ## Roadmap
 
-- [x] Project scaffolding & architecture
-- [ ] `AgentWalletFactory` Soroban contract
-- [ ] `PaymentChannel` Soroban contract
-- [ ] `Escrow` Soroban contract
-- [ ] `RateLimiter` Soroban contract
-- [ ] TypeScript SDK core
-- [ ] Python SDK
-- [ ] Business dashboard (React + Tailwind)
-- [ ] Stellar Community Fund grant application
-- [ ] Mainnet deployment
+- [x] [Project scaffolding and workspace](pnpm-workspace.yaml)
+- [x] [`AgentWalletFactory`](contracts/agent_wallet_factory/src/lib.rs) Soroban contract
+- [x] [`PaymentChannel`](contracts/payment_channel/src/lib.rs) Soroban contract
+- [x] [`Escrow`](contracts/escrow/src/lib.rs) Soroban contract
+- [x] [`RateLimiter`](contracts/rate_limiter/src/lib.rs) Soroban contract
+- [x] [`CircuitBreaker`](contracts/circuit_breaker/src/lib.rs) Soroban contract
+- [x] [`PriceOracle`](contracts/price_oracle/src/lib.rs) and [`AMMSwap`](contracts/amm_swap/src/lib.rs) contracts
+- [x] [TypeScript SDK core](packages/core/src/index.ts)
+- [x] [React hooks package](packages/react/src/index.ts)
+- [ ] [Python SDK](python/src/stellaragent/agent.py)
+  - [x] [Deterministic fixed-point and bid math](python/src/stellaragent/fixed_point.py) with cross-language fixtures
+  - [ ] [Soroban contract invocation](python/src/stellaragent/agent.py) — contract methods are still explicit stubs
+- [x] [Soroban event indexer](packages/indexer/src/indexer.ts)
+- [x] [Business dashboard](dashboard/src/App.tsx) with [Playwright coverage](dashboard/e2e/routes.spec.ts)
+- [x] [ZK solvency proof crate](zk/solvency_proof/src/lib.rs) with [end-to-end tests](zk/solvency_proof/tests/end_to_end.rs)
+- [ ] Stellar Community Fund grant application (non-code milestone)
+- [ ] [Mainnet deployment](docs/deployment.md)
 
 ---
 
